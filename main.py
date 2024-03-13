@@ -1,4 +1,5 @@
 import random
+import csv
 
 
 def new_numbers(a, b):
@@ -55,6 +56,13 @@ def main():
     a = int(input("Enter a: "))
     b = int(input("Enter b: "))
     limit = int(input("Enter limit: "))
+
+    numbers = add_numbers(a, b, limit)
+    with open("numbers.csv", "w", newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(["iteration", "numbers"])
+        for i in range(0, len(numbers)):
+            csvwriter.writerow((i, numbers[i]))
 
 
 if __name__ == '__main__':
