@@ -53,8 +53,8 @@ def add_numbers(a, b, limit):
     
 
 def main():
-    a = int(input("Enter a: "))
-    b = int(input("Enter b: "))
+    a = float(input("Enter a: "))
+    b = float(input("Enter b: "))
     limit = int(input("Enter limit: "))
 
     numbers = add_numbers(a, b, limit)
